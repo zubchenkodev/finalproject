@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { styled } from 'styled-components';
 import { StyledSubtitle, StyledTitle, StyledTextBlock, StyledCodeBlock, StyledInfo, StyledSmallIconButton, StyledTextButton, StyledHeading3 } from '../../styles/ReusableComponents';
@@ -44,8 +44,6 @@ const StyledFlexbox = styled.div`
 
 const Note = () => {
 
-  const [editMode, setEditMode] = useState(false);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -82,10 +80,6 @@ const Note = () => {
     dispatch(toggleSecondarySidebar(true));
   }
 
-  const toggleEditMode = () => {
-    setEditMode(true);
-  }
-
   
 
   return (
@@ -113,7 +107,6 @@ const Note = () => {
           </div>
         ))}
         </div>
-        <button onClick={toggleEditMode}>Edit</button>
       </StyledNoteBody>
       <StyledNoteFooter>
         <div>

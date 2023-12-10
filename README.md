@@ -1,8 +1,10 @@
-# React + Vite
+Hi! 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My project is using React/ Redux Toolkit to create and save the notes, that any studend might need during any course. The main functionality is an ability to create a folder, chose it's category, create notes within this folder and delete them. Each note can combination of 3 type of content ( as many of each as needed and in any order): subtitles to separate the text, text blocks and 'code' blocks. Also each note can be marked/ unmarked as favorite or as well learned. 
 
-Currently, two official plugins are available:
+Notes in each folder can be sorted and filtered.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Homepage holds information about favorite notes, well learned notes and chart of most popular categories. New categories can also be added on the homepage.
+
+All the data is stored in the local storage.
+
