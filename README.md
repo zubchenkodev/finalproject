@@ -6,5 +6,7 @@ Notes in each folder can be sorted and filtered.
 
 Homepage holds information about favorite notes, well learned notes and chart of most popular categories. New categories can also be added on the homepage.
 
-All the data is stored in the local storage.
+All the data is stored in the local storage, so there is no data at the beginning.
+
+
 
