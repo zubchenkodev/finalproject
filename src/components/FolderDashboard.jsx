@@ -68,7 +68,7 @@ const FolderDashboard = () => {
       }
       </StyledNoteBody>
       <StyledNoteFooter>
-      <StyledSmallIconButton data-tooltip-id="remove-tooltip" data-tooltip-content="Press to remove a folder" onClick={onRemoveFolder}><FontAwesomeIcon icon={faTrashCan} /></StyledSmallIconButton>
+      <StyledSmallIconButton aria-label="Remove Folder" data-tooltip-id="remove-tooltip" data-tooltip-content="Press to remove a folder" onClick={onRemoveFolder}><FontAwesomeIcon icon={faTrashCan} /></StyledSmallIconButton>
         <Tooltip id="remove-tooltip" />
       </StyledNoteFooter>
     </StyledFolderDashboard>

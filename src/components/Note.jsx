@@ -113,12 +113,12 @@ const Note = () => {
       </StyledNoteBody>
       <StyledNoteFooter>
         <div>
-        <StyledSmallIconButton data-tooltip-id="remove-tooltip" data-tooltip-content="Press to remove a note" onClick={onRemoveNote}><FontAwesomeIcon icon={faTrashCan} /></StyledSmallIconButton>
+        <StyledSmallIconButton aria-label="Remove note" data-tooltip-id="remove-tooltip" data-tooltip-content="Press to remove a note" onClick={onRemoveNote}><FontAwesomeIcon icon={faTrashCan} /></StyledSmallIconButton>
         <Tooltip id="remove-tooltip" />
         </div>
-        <StyledSmallIconButton data-tooltip-id="fav-tooltip" data-tooltip-content="Press to mark/unmark as a favorite note" onClick={onMarkNoteAsFav}><FontAwesomeIcon icon={note.isFav ? faHeart : faHeartRegular} /></StyledSmallIconButton>
+        <StyledSmallIconButton aria-label="Mark as favorite" data-tooltip-id="fav-tooltip" data-tooltip-content="Press to mark/unmark as a favorite note" onClick={onMarkNoteAsFav}><FontAwesomeIcon icon={note.isFav ? faHeart : faHeartRegular} /></StyledSmallIconButton>
         <Tooltip id="fav-tooltip" />
-        <StyledSmallIconButton data-tooltip-id="known-tooltip" data-tooltip-content="Press to mark/unmark as a well-learned note" onClick={onMarkNoteAsStudied}><FontAwesomeIcon icon={note.isStudied ? faStar: faStarRegular} /></StyledSmallIconButton>
+        <StyledSmallIconButton aria-label="Mark as well-learned" data-tooltip-id="known-tooltip" data-tooltip-content="Press to mark/unmark as a well-learned note" onClick={onMarkNoteAsStudied}><FontAwesomeIcon icon={note.isStudied ? faStar: faStarRegular} /></StyledSmallIconButton>
         <Tooltip id="known-tooltip" />
       </StyledNoteFooter>
     </StyledNote>

@@ -36,7 +36,7 @@ const NewFolder = () => {
       <StyledSidebar>
         <StyledSidebarHeader>
           <StyledHeading3>Add New Folder</StyledHeading3>
-          <StyledTextButton onClick={backToAllFolders}><FontAwesomeIcon icon={faAngleLeft} />Back to all folders</StyledTextButton>
+          <StyledTextButton aria-label="Back to folders" onClick={backToAllFolders}><FontAwesomeIcon icon={faAngleLeft} />Back to all folders</StyledTextButton>
         </StyledSidebarHeader>
         <AddFolderForm />
       </StyledSidebar>

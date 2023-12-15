@@ -45,7 +45,7 @@ const AddFolder = () => {
 
 
   return (
-    <StyledAddButton
+    <StyledAddButton aria-label="New Folder"
     onClick={handleAddFolder}
     disabled={isDisable}
     >

@@ -89,7 +89,7 @@ const AddFolderForm = () => {
             }
             </StyledFolderForm>
             <StyledSidebarFooter>
-            <StyledSubmitButton onClick={handleSubmit} type="submit"><span><FontAwesomeIcon icon={faCircleCheck}/></span>Submit</StyledSubmitButton>
+            <StyledSubmitButton aria-label="Submit Form" onClick={handleSubmit} type="submit"><span><FontAwesomeIcon icon={faCircleCheck}/></span>Submit</StyledSubmitButton>
             </StyledSidebarFooter>
             </Fragment>
     )

@@ -70,7 +70,7 @@ const AddNewTags = () => {
                     value={tagName}
                     onChange={e => setTagName(e.target.value)}
                     />
-                <StyledSmallColorIconButton onClick={onAddNewTag}><FontAwesomeIcon icon={faCheck} /></StyledSmallColorIconButton>
+                <StyledSmallColorIconButton aria-label="Submit Tag" onClick={onAddNewTag}><FontAwesomeIcon icon={faCheck} /></StyledSmallColorIconButton>
             </StyledFlexBoxWrapper>
             </form>
         </StyledBlock>

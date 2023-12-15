@@ -8,6 +8,15 @@ import { StyledSelectMini, StyledCheckWrapper, StyledHeading3, StyledTextButton 
 import { StyledSmallIconTextButton } from '../styles/AddNewNoteStyles';
 import { toggleMainSidebar, toggleSecondarySidebar } from '../reducers/sidebar/sidebarSlice';
 
+const LabelSort = styled.label`
+    font-size: .75rem;
+`
+const SortFlex = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`;
+
 const StyledNotesListWrapper = styled.div`
     overflow-y: auto;
 `
@@ -80,25 +89,26 @@ const NotesList = () => {
         <Fragment>
             <StyledNotesListHeader>
             <StyledHeading3>All Notes in Folder</StyledHeading3>
-            <StyledTextButton onClick={backToAllFolders}><FontAwesomeIcon icon={faAngleLeft} />Back to all folders</StyledTextButton>
+            <StyledTextButton aria-label="Back to all folders" onClick={backToAllFolders}><FontAwesomeIcon icon={faAngleLeft} />Back to all folders</StyledTextButton>
             </StyledNotesListHeader>
             <StyledNotesListSelectorWrapper>
-            <div>
-            <label>
-            <StyledSelectMini value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+            <SortFlex>
+            <LabelSort htmlFor="sort" className="hidden">Sort by</LabelSort>
+            <StyledSelectMini id='sort' name='sort' value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
             <option value="default">Newest first</option>
             <option value="abc">ABC</option>
             <option value="zyx">ZYX</option>
             </StyledSelectMini>
-            </label>
-            </div>
+            </SortFlex>
             <Flex>
             <StyledCheckWrapper>
-            <input type="checkbox" checked={showOnlyFavs} onChange={() => setShowOnlyFavs(!showOnlyFavs)} />
+            <LabelSort htmlFor="favorite" className="hidden">Favorite</LabelSort>
+            <input id='favorite' name='favorite' type="checkbox" checked={showOnlyFavs} onChange={() => setShowOnlyFavs(!showOnlyFavs)} />
             <FontAwesomeIcon icon={faHeart} />
             </StyledCheckWrapper>
             <StyledCheckWrapper>
-            <input type="checkbox" checked={showOnlyStudied} onChange={() => setShowOnlyStudied(!showOnlyStudied)} />
+            <LabelSort htmlFor="well-learned" className="hidden">Well-learned</LabelSort>
+            <input id='well-learned' name='well-learned' type="checkbox" checked={showOnlyStudied} onChange={() => setShowOnlyStudied(!showOnlyStudied)} />
             <FontAwesomeIcon icon={faStar} />
             </StyledCheckWrapper>
             </Flex>

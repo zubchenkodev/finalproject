@@ -179,18 +179,18 @@ const NewNote = () => {
                     </StyledInputWrapper>
                 ))}
                 <StyledFlexbox>
-                    <StyledSmallIconTextButton onClick={handleAddContent} type="button">
+                    <StyledSmallIconTextButton aria-label="Add text" onClick={handleAddContent} type="button">
                         <span>+ Add text</span>
                     </StyledSmallIconTextButton>
-                    <StyledSmallIconTextButton onClick={handleAddCode} type="button">
+                    <StyledSmallIconTextButton aria-label="Add code" onClick={handleAddCode} type="button">
                         <span>+ Add code</span>
                     </StyledSmallIconTextButton>
-                    <StyledSmallIconTextButton onClick={handleAddSubtitle} type="button">
+                    <StyledSmallIconTextButton aria-label="Add subtitle" onClick={handleAddSubtitle} type="button">
                         <span>+ Add subtitle</span>
                     </StyledSmallIconTextButton>
                 </StyledFlexbox>
             </form>
-            <StyledAddNoteFooter><StyledSubmitButton onClick={handleClick} type="submit"><span><FontAwesomeIcon icon={faCircleCheck}/></span>Submit</StyledSubmitButton></StyledAddNoteFooter>
+            <StyledAddNoteFooter><StyledSubmitButton aria-label="Submit Note" onClick={handleClick} type="submit"><span><FontAwesomeIcon icon={faCircleCheck}/></span>Submit</StyledSubmitButton></StyledAddNoteFooter>
         </StyledAddNotePage>
   )
 }

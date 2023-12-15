@@ -20,7 +20,7 @@ const AddNoteButton = () => {
     }
 
     return (
-        <StyledAddButton onClick={handleClick}>
+        <StyledAddButton aria-label="Add Note" onClick={handleClick}>
         <span><FontAwesomeIcon icon={faFileCirclePlus} /></span>
         Add Note
         </StyledAddButton>

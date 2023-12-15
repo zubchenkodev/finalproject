@@ -46,7 +46,7 @@ const Dashboard = () => {
     <MainWrapper>
     <MainHeader>
       <StyledHeading3>Welcome to Curious Chronicle!</StyledHeading3>
-      <StyledTextButton onClick={backToAllFolders}><FontAwesomeIcon icon={faFolderTree} />Show folders</StyledTextButton>
+      <StyledTextButton aria-label="Back To Folders" onClick={backToAllFolders}><FontAwesomeIcon icon={faFolderTree} />Show folders</StyledTextButton>
     </MainHeader>
     <StyledDashboard>
     <StyledGreeting>
