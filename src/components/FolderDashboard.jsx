@@ -32,7 +32,7 @@ const StyledGreeting = styled.div`
   grid-area: 1 / 1 / 2 / 5;
   padding-top: 1rem;
   padding-buttom: 1rem;
-  color: #b1b3c3;
+  color: #770ef7;
   
 `
 

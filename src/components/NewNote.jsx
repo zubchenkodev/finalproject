@@ -16,7 +16,7 @@ const StyledGreeting = styled.div`
   padding-top: 1rem;
   padding-buttom: 1rem;
   margin-bottom: 1rem;
-  color: #b1b3c3;
+  color: #770ef7;
   
 `
 

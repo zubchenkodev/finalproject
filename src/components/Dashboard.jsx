@@ -28,7 +28,7 @@ const StyledGreeting = styled.div`
   grid-area: 1 / 1 / 2 / 5;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: #b1b3c3;
+  color: #770ef7;
   @media screen and (max-width: 1000px) {
     grid-area: 1 / 1 / 2 / 2;
   }
