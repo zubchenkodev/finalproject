@@ -3,9 +3,9 @@ import { styled } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router';
-import { toggleSecondarySidebar } from '../sidebar/sidebarSlice';
+import { toggleSecondarySidebar } from '../reducers/sidebar/sidebarSlice';
 import { useDispatch } from 'react-redux';
-import { StyledAddButton } from '../../styles/ReusableComponents';
+import { StyledAddButton } from '../styles/ReusableComponents';
 
 
 const AddNoteButton = () => {

@@ -1,14 +1,17 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { styled } from 'styled-components';
-import { StyledSubtitle, StyledTitle, StyledTextBlock, StyledCodeBlock, StyledInfo, StyledSmallIconButton, StyledTextButton, StyledHeading3 } from '../../styles/ReusableComponents';
+import { StyledSubtitle, StyledTitle, StyledTextBlock, StyledCodeBlock, StyledInfo, StyledSmallIconButton, StyledTextButton, StyledHeading3 } from '../styles/ReusableComponents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan, faHeart, faStar, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as faHeartRegular, faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
-import { removeNote, setActiveNoteId, markNoteAsStudied, markNoteAsFav } from './notes';
+import { removeNote, setActiveNoteId, markNoteAsStudied, markNoteAsFav } from '../reducers/notes/notes';
 import { useNavigate } from 'react-router-dom';
-import { removeNoteFromFolder } from '../folders/folders';
-import { toggleSecondarySidebar } from '../sidebar/sidebarSlice';
+import { removeNoteFromFolder } from '../reducers/folders/folders';
+import { toggleSecondarySidebar } from '../reducers/sidebar/sidebarSlice';
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip';
+
 
 const StyledNote = styled.article`
   background-color: #f4f7fa;
@@ -110,10 +113,13 @@ const Note = () => {
       </StyledNoteBody>
       <StyledNoteFooter>
         <div>
-        <StyledSmallIconButton onClick={onRemoveNote}><FontAwesomeIcon icon={faTrashCan} /></StyledSmallIconButton>
+        <StyledSmallIconButton data-tooltip-id="remove-tooltip" data-tooltip-content="Press to remove a note" onClick={onRemoveNote}><FontAwesomeIcon icon={faTrashCan} /></StyledSmallIconButton>
+        <Tooltip id="remove-tooltip" />
         </div>
-        <StyledSmallIconButton onClick={onMarkNoteAsFav}><FontAwesomeIcon icon={note.isFav ? faHeart : faHeartRegular} /></StyledSmallIconButton>
-        <StyledSmallIconButton onClick={onMarkNoteAsStudied}><FontAwesomeIcon icon={note.isStudied ? faStar: faStarRegular} /></StyledSmallIconButton>
+        <StyledSmallIconButton data-tooltip-id="fav-tooltip" data-tooltip-content="Press to mark/unmark as a favorite note" onClick={onMarkNoteAsFav}><FontAwesomeIcon icon={note.isFav ? faHeart : faHeartRegular} /></StyledSmallIconButton>
+        <Tooltip id="fav-tooltip" />
+        <StyledSmallIconButton data-tooltip-id="known-tooltip" data-tooltip-content="Press to mark/unmark as a well-learned note" onClick={onMarkNoteAsStudied}><FontAwesomeIcon icon={note.isStudied ? faStar: faStarRegular} /></StyledSmallIconButton>
+        <Tooltip id="known-tooltip" />
       </StyledNoteFooter>
     </StyledNote>
   )

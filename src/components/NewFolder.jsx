@@ -1,10 +1,10 @@
 import React from 'react'
-import Subheader from '../ui/Subheader'
-import AddFolderForm from '../features/folders/AddFolderForm';
+import Subheader from './Subheader'
+import AddFolderForm from './AddFolderForm';
 import { StyledPage, StyledTitle, StyledHeading3, StyledTextButton } from '../styles/ReusableComponents';
 import { styled } from 'styled-components';
 import { useDispatch } from 'react-redux';
-import { toggleMainSidebar } from '../features/sidebar/sidebarSlice';
+import { toggleMainSidebar } from '../reducers/sidebar/sidebarSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck,  faAngleLeft} from '@fortawesome/free-solid-svg-icons';
 

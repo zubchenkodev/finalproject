@@ -1,12 +1,12 @@
 import React from 'react';
 import { styled } from 'styled-components';
-import FoldersList from '../features/folders/FoldersList';
-import AddFolder from '../features/folders/AddFolder';
+import FoldersList from './FoldersList';
+import AddFolder from './AddFolder';
 import { useSelector, useDispatch } from 'react-redux';
 import { StyledHeading3, StyledTextButton } from '../styles/ReusableComponents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import { toggleMainSidebar } from '../features/sidebar/sidebarSlice';
+import { toggleMainSidebar } from '../reducers/sidebar/sidebarSlice';
 
 
 const StyledSidebar = styled.aside`

@@ -29,7 +29,7 @@ export const StyledHeading1 = styled.h1`
     color: #ffffff;
 `
 
-export const StyledHeading3 = styled.h3`
+export const StyledHeading3 = styled.h2`
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #1b1834;
@@ -86,7 +86,7 @@ export const StyledSmallIconButton = styled.button`
 
 export const StyledSmallColorIconButton = styled.button`
     color: #ffffff;
-    background-color: #fd1675;
+    background-color: #cc0255;
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
@@ -128,7 +128,7 @@ export const StyledTag = styled.div`
 `
 
 export const StyledLabel = styled.label`
-    color: #fd1675;
+    color: #cc0255;
     font-weight: bold;
 `
 
@@ -200,10 +200,16 @@ export const StyledAddButton = styled.button`
     gap: 1rem;
     font-weight: bold;
     border: none;
-    color: #e7005e;
+    color: #cc0255;
     cursor: pointer;
+    height: 100%;
     span {
         font-size: 1.5rem
+    }
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.5;
     }
 `
 

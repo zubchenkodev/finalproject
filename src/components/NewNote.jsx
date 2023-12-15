@@ -1,17 +1,24 @@
 import React, { useState, Fragment } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addNewNote, setActiveNoteId } from './notes';
-import { addNoteToFolder } from '../folders/folders';
+import { addNewNote, setActiveNoteId } from '../reducers/notes/notes';
+import { addNoteToFolder } from '../reducers/folders/folders';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck,  faAngleLeft} from '@fortawesome/free-solid-svg-icons';
 import { styled } from 'styled-components';
-import { StyledLabel, StyledSmallIconTextButton, StyledTextarea, StyledInput, StyledCodeTextarea } from '../../styles/AddNewNoteStyles';
-import { StyledHeading3, StyledTextButton, StyledSubmitButton } from '../../styles/ReusableComponents';
-import AddNewTags from '../tags/AddNewTags';
+import { StyledLabel, StyledSmallIconTextButton, StyledTextarea, StyledInput, StyledCodeTextarea } from '../styles/AddNewNoteStyles';
+import { StyledHeading3, StyledTextButton, StyledSubmitButton } from '../styles/ReusableComponents';
+import AddNewTags from './AddNewTags';
 import { useNavigate } from 'react-router-dom';
-import { toggleSecondarySidebar } from '../sidebar/sidebarSlice';
+import { toggleSecondarySidebar } from '../reducers/sidebar/sidebarSlice';
 
-
+const StyledGreeting = styled.div`
+  grid-area: 1 / 1 / 2 / 5;
+  padding-top: 1rem;
+  padding-buttom: 1rem;
+  margin-bottom: 1rem;
+  color: #b1b3c3;
+  
+`
 
 const StyledAddNoteHeader = styled.div`
     padding: 1rem;
@@ -110,6 +117,9 @@ const NewNote = () => {
             <StyledTextButton onClick={backToAllNotes}><FontAwesomeIcon icon={faAngleLeft} />Back to all notes</StyledTextButton>
             </StyledAddNoteHeader>
             <form>
+                <StyledGreeting>
+                Add content to your note by clicking the button corresponding to the desired content type (text, code, or subtitle). You can include as much content as you need. Just remember to submit your note.
+                </StyledGreeting>
                 <StyledInputWrapper>
                     <StyledLabel htmlFor="noteName">Note title:</StyledLabel>
                     <StyledInput type="text" id="noteName" name="noteName"

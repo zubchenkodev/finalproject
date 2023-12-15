@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import Dashboard from './pages/Dashboard';
-import AppLayout from "./ui/AppLayout";
-import Folder from "./pages/Folder";
-import NewFolder from "./pages/NewFolder";
-import FolderDashboard from "./features/folders/FolderDashboard";
-import Note from "./features/notes/Note";
-import NewNote from "./features/notes/NewNote";
+import Dashboard from './components/Dashboard';
+import AppLayout from "./components/AppLayout";
+import Folder from "./components/Folder";
+import NewFolder from "./components/NewFolder";
+import FolderDashboard from "./components/FolderDashboard";
+import Note from "./components/Note";
+import NewNote from "./components/NewNote";
 
 
 const App = () => {

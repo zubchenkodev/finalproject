@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { styled } from 'styled-components';
-import GlobalStyles from '../../styles/GlobalStyles';
+import GlobalStyles from '../styles/GlobalStyles';
 
 
 const StyledFolderHeader = styled.header`

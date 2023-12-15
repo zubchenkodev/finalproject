@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolderClosed, faEllipsisVertical, faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 import { styled } from 'styled-components';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import GlobalStyles from '../../styles/GlobalStyles';
+import GlobalStyles from '../styles/GlobalStyles';
 import { useDispatch, useSelector } from 'react-redux';
-import { setActiveFolderId } from './folders';
-import { setActiveNoteId } from '../notes/notes';
-import { toggleMainSidebar, toggleSecondarySidebar } from '../sidebar/sidebarSlice';
+import { setActiveFolderId } from '../reducers/folders/folders';
+import { setActiveNoteId } from '../reducers/notes/notes';
+import { toggleMainSidebar, toggleSecondarySidebar } from '../reducers/sidebar/sidebarSlice';
 
 
 const StyledFolderListItem = styled.li`

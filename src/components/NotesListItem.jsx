@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolderClosed, faEllipsisVertical, faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 import { styled } from 'styled-components';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import GlobalStyles from '../../styles/GlobalStyles';
+import GlobalStyles from '../styles/GlobalStyles';
 import { useDispatch, useSelector } from 'react-redux';
-import { setActiveNoteId } from './notes';
-import { toggleSecondarySidebar } from '../sidebar/sidebarSlice';
+import { setActiveNoteId } from '../reducers/notes/notes';
+import { toggleSecondarySidebar } from '../reducers/sidebar/sidebarSlice';
 
 const StyledNoteListItem = styled.li`
     padding: 1rem 1rem;

@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import foldersReducer from './features/folders/folders';
-import notesReducer from './features/notes/notes';
-import tagsReducer from './features/tags/tags';
-import sidebarReducer from "./features/sidebar/sidebarSlice";
+import foldersReducer from './reducers/folders/folders';
+import notesReducer from './reducers/notes/notes';
+import tagsReducer from './reducers/tags/tags';
+import sidebarReducer from "./reducers/sidebar/sidebarSlice";
 
 
 export const store = configureStore({

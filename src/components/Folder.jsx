@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Outlet, useParams } from 'react-router-dom';
-import FolderHeader from '../features/folders/FolderHeader';
-import FolderSidebar from '../features/folders/FolderSidebar';
+import FolderHeader from './FolderHeader';
+import FolderSidebar from './FolderSidebar';
 import { styled } from 'styled-components';
 
 

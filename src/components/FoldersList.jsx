@@ -11,6 +11,13 @@ const StyledFolderList = styled.ul`
     padding: 1rem;
 `
 
+const StyledMessage = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+`
+
 const FoldersList = () => {
 
     const folders = useSelector(state => state.folders.folders);
@@ -18,7 +25,10 @@ const FoldersList = () => {
     return (
         <StyledFolderList>
             {folders.length > 0 ? folders.map(folder => <FoldersListItem key={folder.id} folder={folder}/> ) :
-            <p>🥸 No folders found 🥸</p>
+            <StyledMessage>
+                <b>🥸 No folders found 🥸</b>
+                <p>Generate a folder by clicking on the 'Add Folder' button located below. Please, remember that you can only add folders after creating categories.</p>
+            </StyledMessage>
             }
         </StyledFolderList>
     )

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { styled } from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles';
 import { Link, useNavigate } from 'react-router-dom';
-import { toggleMainSidebar } from '../features/sidebar/sidebarSlice';
+import { toggleMainSidebar } from '../reducers/sidebar/sidebarSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { StyledHeading1 } from '../styles/ReusableComponents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

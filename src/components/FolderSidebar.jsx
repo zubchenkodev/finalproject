@@ -1,9 +1,9 @@
 import React from 'react';
 import { styled } from 'styled-components';
-import NotesList from '../notes/NotesList';
+import NotesList from './NotesList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileCirclePlus } from '@fortawesome/free-solid-svg-icons';
-import AddNoteButton from '../notes/AddNoteButton';
+import AddNoteButton from './AddNoteButton';
 import { useSelector } from 'react-redux';
 
 const StyledFolderSidebar = styled.aside`

@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { addNewFolder } from './folders';
-import { StyledLabel, StyledTextarea, StyledInput, StyledSelect, StyledSubmitButton } from '../../styles/ReusableComponents';
+import { addNewFolder } from '../reducers/folders/folders';
+import { StyledLabel, StyledTextarea, StyledInput, StyledSelect, StyledSubmitButton } from '../styles/ReusableComponents';
 import { styled } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck,  faAngleLeft} from '@fortawesome/free-solid-svg-icons';

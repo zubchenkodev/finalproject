@@ -2,8 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faHashtag } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch } from 'react-redux';
-import { removeTag } from './tags';
-import { StyledTag } from '../../styles/ReusableComponents';
+import { removeTag } from '../reducers/tags/tags';
+import { StyledTag } from '../styles/ReusableComponents';
 
 
 export const Tag = ({tag, deletable}) => {

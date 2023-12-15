@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { StyledSubtitle, StyledSmallColorIconButton, StyledSmallInput, StyledFlexBoxWrapper } from '../../styles/ReusableComponents';
-import { StyledInput, StyledLabel } from '../../styles/AddNewNoteStyles';
+import { StyledSubtitle, StyledSmallColorIconButton, StyledSmallInput, StyledFlexBoxWrapper } from '../styles/ReusableComponents';
+import { StyledInput, StyledLabel } from '../styles/AddNewNoteStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Tag from './Tag';
 import { useDispatch, useSelector } from 'react-redux';
-import { addNewTag } from './tags';
+import { addNewTag } from '../reducers/tags/tags';
 import { styled } from 'styled-components';
 
 const StyledBlock = styled.div`

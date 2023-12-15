@@ -4,12 +4,19 @@ import NotesListItem from './NotesListItem';
 import { styled } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart, faStar, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import { StyledSelectMini, StyledCheckWrapper, StyledHeading3, StyledTextButton } from '../../styles/ReusableComponents';
-import { StyledSmallIconTextButton } from '../../styles/AddNewNoteStyles';
-import { toggleMainSidebar, toggleSecondarySidebar } from '../sidebar/sidebarSlice';
+import { StyledSelectMini, StyledCheckWrapper, StyledHeading3, StyledTextButton } from '../styles/ReusableComponents';
+import { StyledSmallIconTextButton } from '../styles/AddNewNoteStyles';
+import { toggleMainSidebar, toggleSecondarySidebar } from '../reducers/sidebar/sidebarSlice';
 
 const StyledNotesListWrapper = styled.div`
     overflow-y: auto;
+`
+
+const StyledMessage = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
 `
 
 const StyledNotesList = styled.ul`
@@ -97,7 +104,9 @@ const NotesList = () => {
             </Flex>
             </StyledNotesListSelectorWrapper>
         <StyledNotesList>
-            {sortedNotes.length > 0 ? sortedNotes.reverse().map(note => <NotesListItem key={note.id} note={note}/> ) : <p>🥲 No notes found 🥸</p>}
+            {sortedNotes.length > 0 ? sortedNotes.reverse().map(note => <NotesListItem key={note.id} note={note}/> ) : <StyledMessage>
+            <b>🥸 No notes found 🥸</b>
+        </StyledMessage>}
         </StyledNotesList>
         </Fragment>
     )

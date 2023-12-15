@@ -39,7 +39,7 @@ const StyledFlex = styled.div`
 `
 const StyledNumber = styled.span`
     font-weight: bold;
-    color: #fd1675;
+    color: #cc0255;
 `
 
 const StyledMessage = styled.p`

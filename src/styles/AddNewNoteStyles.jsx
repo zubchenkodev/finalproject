@@ -1,13 +1,13 @@
 import { styled } from "styled-components";
 
 export const StyledLabel = styled.label`
-    color: #fd1675;
+    color: #cc0255;
     font-weight: bold;
 `
 
 export const StyledSmallIconTextButton = styled.button`
     border-radius: 999px;
-    background: #e7005e;
+    background: #cc0255;
     color: #ffffff;
     font-weight: bold;
     font-size: .7rem;

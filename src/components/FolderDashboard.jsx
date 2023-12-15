@@ -1,13 +1,15 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { styled } from 'styled-components';
-import { StyledSmallIconButton, StyledHeading3 } from '../../styles/ReusableComponents';
+import { StyledSmallIconButton, StyledHeading3 } from '../styles/ReusableComponents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan, faHeart, faStar } from '@fortawesome/free-solid-svg-icons';
-import { removeFolder, setActiveFolderId } from './folders';
+import { removeFolder, setActiveFolderId } from '../reducers/folders/folders';
 import { useNavigate } from 'react-router-dom';
-import { removeNote } from '../notes/notes';
-import MainHeader from '../../ui/MainHeader';
+import { removeNote } from '../reducers/notes/notes';
+import MainHeader from './MainHeader';
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip';
 
 
 const StyledFolderDashboard = styled.div`
@@ -24,6 +26,14 @@ const StyledNoteBody = styled.div`
 const StyledNoteFooter = styled.footer`
   padding: 1rem;
   background-color: #770ef7;
+`
+
+const StyledGreeting = styled.div`
+  grid-area: 1 / 1 / 2 / 5;
+  padding-top: 1rem;
+  padding-buttom: 1rem;
+  color: #b1b3c3;
+  
 `
 
 const FolderDashboard = () => {
@@ -51,9 +61,15 @@ const FolderDashboard = () => {
       </MainHeader>
       <StyledNoteBody>
       <p>{folder.description}</p>
+      {folderNotesIds.length === 0 &&
+        <StyledGreeting>
+          <p>Initiate your tasks by creating categories to efficiently organize your notes and track the statistics of your learning progress. After creating a category, you can include folders by selecting the 'Add Folder' button.</p>
+        </StyledGreeting>
+      }
       </StyledNoteBody>
       <StyledNoteFooter>
-      <StyledSmallIconButton onClick={onRemoveFolder}><FontAwesomeIcon icon={faTrashCan} /></StyledSmallIconButton>
+      <StyledSmallIconButton data-tooltip-id="remove-tooltip" data-tooltip-content="Press to remove a folder" onClick={onRemoveFolder}><FontAwesomeIcon icon={faTrashCan} /></StyledSmallIconButton>
+        <Tooltip id="remove-tooltip" />
       </StyledNoteFooter>
     </StyledFolderDashboard>
   )
